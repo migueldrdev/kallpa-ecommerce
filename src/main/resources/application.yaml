@@ -1,0 +1,29 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: kallpa-ecommerce
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/ecommerce_db
+    username: admin
+    password: md@71436151
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: validate # IMPORTANTE: 'validate' verifica que Java coincida con la DB, no la borra ni la crea.
+    properties:
+      hibernate:
+        format_sql: true # Formatea el SQL en la consola para que sea legible
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true # Muestra las consultas (útil para aprender)
+
+logging:
+  level:
+    org:
+      hibernate:
+        type:
+          descriptor:
+            sql: TRACE # Muestra los valores reales insertados (? -> 'Zapatilla')
