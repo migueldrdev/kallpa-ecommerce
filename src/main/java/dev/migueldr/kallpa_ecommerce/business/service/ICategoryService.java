@@ -1,4 +1,4 @@
-package dev.migueldr.kallpa_ecommerce.service;
+package dev.migueldr.kallpa_ecommerce.business.service;
 
 import dev.migueldr.kallpa_ecommerce.persistence.entity.CategoryEntity;
 import java.util.List;
