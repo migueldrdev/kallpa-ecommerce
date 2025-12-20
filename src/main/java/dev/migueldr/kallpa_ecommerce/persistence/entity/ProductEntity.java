@@ -10,6 +10,7 @@ import org.hibernate.type.SqlTypes;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
+import java.util.UUID;
 
 @Entity
 @Table(name = "products")
@@ -22,7 +23,7 @@ public class ProductEntity {
     @GeneratedValue(strategy = GenerationType.UUID)
     @Column(columnDefinition = "uuid", updatable = false, nullable = false)
     @JdbcTypeCode(SqlTypes.UUID)
-    private String id;
+    private UUID id;
 
     @Column(nullable = false)
     private String name;
