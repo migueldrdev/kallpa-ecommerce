@@ -27,7 +27,7 @@ public class KallpaEcommerceApplication {
 							   ProductRepository productRepository,
 							   ProductVariantRepository variantRepository) {
 		return args -> {
-			if (categoryRepository.count() > 3) {
+			if (categoryRepository.count() < 3) {
 				System.out.println("--- INICIANDO CARGA ---");
 
 				// 1. Crear Categoría (Como ya tenías)
